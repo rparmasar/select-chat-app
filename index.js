@@ -79,10 +79,10 @@ if(process.env.NODE_ENV === 'production'){
   });
 }
 
-// app.get('*', (req, res) => {
-//   console.log(path.resolve(__dirname, 'build', 'index.html'));
-//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  console.log(path.resolve(__dirname, 'build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
 
 // app.listen(config.port, () => {
 //   console.log(`Application started at localhost:${config.port}`);
