@@ -70,7 +70,7 @@ class ChatApp extends React.Component {
     // Paste your unique Chat token function
     let identity = {"name": this.state.name};
     console.log(typeof(JSON.stringify(identity)));
-    await fetch('http://localhost:3001/api/token', {
+    await fetch('/api/token', {
       method: 'post',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
