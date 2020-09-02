@@ -4,7 +4,7 @@ import { Client as ChatClient } from 'twilio-chat';
 
 import './assets/Chat.css';
 import './assets/ChatChannelSection.css';
-import { ReactComponent as Logo } from './assets/twilio-mark-red.svg';
+import { ReactComponent as Logo } from './assets/srm-logo-black-background.svg';
 
 import ChatChannel from './ChatChannel';
 import LoginPage from "./LoginPage";
