@@ -72,17 +72,17 @@ app.post('/api/token', (request, response) => {
 
 if(process.env.NODE_ENV === 'production'){
   // app.use(url, expressStaticGzip(dir, gzipOptions));
-  app.use(express.static(__dirname + 'build'));
+  app.use(express.static(__dirname + '/client' + '/build'));
   app.get('/', (req, res) => {
     console.log("This works!");
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'client' ,'build', 'index.html'));
   });
 }
 
-app.get('*', (req, res) => {
-  console.log(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   console.log(path.resolve(__dirname, 'build', 'index.html'));
+//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+// });
 
 // app.listen(config.port, () => {
 //   console.log(`Application started at localhost:${config.port}`);
